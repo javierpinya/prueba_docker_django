@@ -1,0 +1,11 @@
+Una vez tengamos el docker-compose.yml y el Dockerfile
+
+hacemos:
+
+docker-compose run web django-admin startproject djangoDocker .
+
+Modificamos el settings.py, permitiendo las conexiones '*' (para local, no en producción=
+Modificamos la base de datos para usar postgres
+
+después: docker-compose up
+
