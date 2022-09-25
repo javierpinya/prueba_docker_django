@@ -14,6 +14,9 @@ class Author(models.Model):
         ordering = ["surname"]
         verbose_name_plural = "Authors"
 
+    def __str__(self) -> str:
+        return '%s %s' % (self.name, self.surname)
+
 
 class Book(models.Model):
     title = models.CharField(max_length=100, blank=False, null=False)
@@ -26,3 +29,6 @@ class Book(models.Model):
     class Meta:
         ordering = ["title"]
         verbose_name_plural = "Titles"
+
+    def __str__(self):
+        return '%s' % (self.title)
